@@ -5,6 +5,7 @@ import {
     Route
   } from "react-router-dom";
 import { Archived } from '../components/ui/Archived';
+import { Footer } from '../components/ui/Footer';
 import { Home } from '../components/ui/Home';
 import { NavegationBar } from '../components/ui/NavegationBar';
 
@@ -20,6 +21,8 @@ export const AppRouter = () => {
                     <Route path="/" component={Home} />
 
                 </Switch>
+
+                <Footer />
             </div>
         </Router>
     )

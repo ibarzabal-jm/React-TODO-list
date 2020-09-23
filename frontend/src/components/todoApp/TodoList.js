@@ -1,10 +1,10 @@
 import React from 'react'
+import { Row } from 'react-bootstrap'
 import { TodoCard } from './TodoCard'
 
 export const TodoList = ({ todos, handleDelete, handleArchive}) => {
     return (
-        <div>
-            <ul className="list-group list-group-flush">
+        <Row className="m-4">
                 {
                     todos.map( (todo, i) =>(
 
@@ -17,8 +17,8 @@ export const TodoList = ({ todos, handleDelete, handleArchive}) => {
                         />
                     ))
                 }
-            </ul>
+
             
-        </div>
+        </Row>
     )
 }

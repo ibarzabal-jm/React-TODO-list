@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
+import { TodoAddModal } from '../todoApp/TodoAddModal'
 
-import { AddTodoModal }  from '../modal/AddTodoModal'
+
 
 export const NavegationBar = () => {
+
     return (
         <>
             <Navbar collapseOnSelect  bg="dark" variant="dark">
@@ -34,12 +36,9 @@ export const NavegationBar = () => {
                     
                 </Nav>
 
-                <Nav>
-                    <Button>Agregar Tarea</Button>
-                </Nav>
-               
+    
             </Navbar>
-            <AddTodoModal />
+       
         </>
     )
 }

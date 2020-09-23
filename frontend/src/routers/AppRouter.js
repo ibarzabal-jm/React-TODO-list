@@ -4,10 +4,12 @@ import {
     Switch,
     Route
   } from "react-router-dom";
-import { Archived } from '../components/ui/Archived';
-import { Footer } from '../components/ui/Footer';
-import { Home } from '../components/ui/Home';
-import { NavegationBar } from '../components/ui/NavegationBar';
+  
+  import { NavegationBar } from '../components/ui/NavegationBar';
+  import { Footer } from '../components/ui/Footer';
+
+  import { TodoApp } from '../components/todoApp/TodoApp.js';
+  import { Archived } from '../components/ui/Archived.js';
 
 export const AppRouter = () => {
     return (
@@ -18,7 +20,7 @@ export const AppRouter = () => {
                 <Switch>
                     <Route path="/Archived" component={Archived} />
 
-                    <Route path="/" component={Home} />
+                    <Route path="/" component={TodoApp} />
 
                 </Switch>
 

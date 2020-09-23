@@ -8,7 +8,7 @@ export const TodoCard = ({ todo, index, handleDelete, handleArchive}) => {
 
 
     return (
-        <Col md={4} lg={3} xl={2} className="mb-4 text-center d-flex align-items-stretch justify-content-center">
+        <Col className="mb-4 text-center d-flex align-items-stretch justify-content-center">
             <Card >
 
                 <Card.Body>

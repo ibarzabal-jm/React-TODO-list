@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import { useForm } from '../../hooks/useForm';
 
@@ -7,25 +7,13 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 
-export const TodoAddModal = ({ handleAddTodo }) => {
+export const TodoAddModal = ({ handleAddTodo, showModal, handleHide }) => {
 
 
-    const [showModal, setShowModal] = useState(false);
-
-    const handleHide = () =>{
-        setShowModal(false);
-    }
-
-    const handleShow = () =>{
-        setShowModal(true);
-    }
-    
     const [{category, description}, handleInputChange, reset ] = useForm({
         category:'',
         description:'',
     })
-
-    
 
 
     const handleSubmit = ( e ) => {

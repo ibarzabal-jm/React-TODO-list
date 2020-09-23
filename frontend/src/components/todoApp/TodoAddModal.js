@@ -26,8 +26,6 @@ export const TodoAddModal = ({ handleAddTodo, showModal, handleHide }) => {
         }
 
         
-
-
         handleAddTodo( newTodo );
         reset();
 

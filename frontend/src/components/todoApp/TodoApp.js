@@ -1,4 +1,5 @@
-import React, { useEffect, useReducer } from 'react'
+import React, { useState, useEffect, useReducer } from 'react'
+import { Button, Container } from 'react-bootstrap';
 
 import { TodoAddModal } from './TodoAddModal';
 import { TodoList } from './TodoList';
@@ -12,9 +13,18 @@ const init = () =>{
 }
 
 
-
-
 export const TodoApp = () => {
+
+
+    const [showAddTodoModal, setShowAddTodoModal] = useState(false);
+
+    const handleHideModal = () =>{
+        setShowAddTodoModal(false);
+    }
+
+    const handleShowModal = () =>{
+        setShowAddTodoModal(true);
+    }
 
 
     const [todos, dispatch ] = useReducer(todoReducer, [], init);
@@ -50,16 +60,12 @@ export const TodoApp = () => {
     }
 
 
-
-    
-
     return (
         <>
-            <div className="container">
-                <h1>TodoApp ({ todos.length })</h1>
-                
-                
+            <Container >
+                <h1>Tareas por hacer : { todos.length }</h1>
                 <hr></hr>
+                <Button onClick={handleShowModal} >Agregar tarea</Button>
     
                <div className="row">
     
@@ -71,9 +77,14 @@ export const TodoApp = () => {
     
                </div>
                
-            </div>
+            </Container>
 
-            <TodoAddModal handleAddTodo={handleAddTodo}/>
+            <TodoAddModal
+
+                showModal={showAddTodoModal}
+                handleHide={handleHideModal}
+                handleAddTodo={handleAddTodo}
+            />
         </>        
     )
 }

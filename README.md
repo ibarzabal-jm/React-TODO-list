@@ -1,14 +1,16 @@
 # React TODO list
- TODO LIST hecho en react
+ TODO LIST hecho en react, la idea era hacer uso del hook useReducer, como el hook principal y luego hacer una especie de archivos de tareas realizadas, todo guardado de momento en el local Storage.
 
 
 ## Objetivos:
+
 * Hacer un TODO list
 * Spa
 * Crear archivero de todos
-* Darle formato con React Bootstrap
+* Darle formato con React Bootstrap.
 * Guardar en el localStorage de momento.
 * Imagen segun la categoría.
+
 
 
 ## En desarrollo 🚀
@@ -16,15 +18,17 @@
 _Cosas hechas:_
 * Rutas de navegación
 * Cascarón del front
+* TodoList principal
+* Modal AddTodo
+* Navbar
+
 
 
 
 _Cosas por hacer:_
-* Modal de todo
-* UI (footer, home, navbar)
-* TODO list principal
+* Footer
 * Archived
-* Fetch
+* Fetch de imagenes
 
 
 ## Construido con 🛠️

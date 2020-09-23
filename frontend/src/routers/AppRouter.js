@@ -6,7 +6,7 @@ import {
   } from "react-router-dom";
   
   import { NavegationBar } from '../components/ui/NavegationBar';
-  import { Footer } from '../components/ui/Footer';
+//   import { Footer } from '../components/ui/Footer';
 
   import { TodoApp } from '../components/todoApp/TodoApp.js';
   import { Archived } from '../components/ui/Archived.js';
@@ -24,7 +24,7 @@ export const AppRouter = () => {
 
                 </Switch>
 
-                <Footer />
+                {/* <Footer /> */}
             </div>
         </Router>
     )

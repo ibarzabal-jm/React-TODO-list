@@ -10,6 +10,19 @@ import { TodoAddModal } from '../todoApp/TodoAddModal'
 
 export const NavegationBar = () => {
 
+    const [showAddTodoModal, setShowAddTodoModal] = useState(false);
+
+    const handleHideModal = () =>{
+        setShowAddTodoModal(false);
+    }
+
+    const handleShowModal = () =>{
+        setShowAddTodoModal(true);
+    }
+
+
+    
+
     return (
         <>
             <Navbar collapseOnSelect  bg="dark" variant="dark">
@@ -36,9 +49,22 @@ export const NavegationBar = () => {
                     
                 </Nav>
 
+                <Button
+                    onClick={handleShowModal}
+                
+                >
+                    Agregar Tarea
+                </Button>
+
     
             </Navbar>
-       
+
+            <TodoAddModal
+
+                showModal={showAddTodoModal}
+                handleHide={handleHideModal}
+            />
+
         </>
     )
 }

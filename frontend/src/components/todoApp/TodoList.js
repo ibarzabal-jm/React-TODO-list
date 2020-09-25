@@ -1,8 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Row } from 'react-bootstrap'
 import { TodoCard } from './TodoCard'
+import { TodoContext } from './TodoContext'
 
-export const TodoList = ({ todos, handleDelete, handleArchive}) => {
+export const TodoList = ( { todos } ) => {
+
+
+    const { dispatch } = useContext(TodoContext);
+
+    const handleDelete = ( todoId ) => {
+
+        dispatch( {
+            type:'delete',
+            payload: todoId
+        } );
+
+    }
+
+    const handleArchive = (todoId) =>{
+        dispatch( {
+            type:'archive',
+            payload: todoId
+        } );
+    }
+
     return (
         <Row className="m-4">
                 {

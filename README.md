@@ -24,11 +24,12 @@ _Cosas hechas:_
 
 
 
-
 _Cosas por hacer:_
 * Footer
 * Archived
 * Fetch de imagenes
+* Diferenciar entre archived y todo por hacer principal
+* Alert
 
 
 ## Construido con 🛠️

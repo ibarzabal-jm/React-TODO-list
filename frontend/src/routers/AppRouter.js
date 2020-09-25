@@ -8,8 +8,8 @@ import {
   import { NavegationBar } from '../components/ui/NavegationBar';
 //   import { Footer } from '../components/ui/Footer';
 
-  import { TodoApp } from '../components/todoApp/TodoApp.js';
-  import { Archived } from '../components/ui/Archived.js';
+import { ArchivedScreen } from '../components/ui/ArchivedScreen';
+import { HomeScreen } from '../components/ui/HomeScreen';
 
 export const AppRouter = () => {
     return (
@@ -18,9 +18,9 @@ export const AppRouter = () => {
                 <NavegationBar />
 
                 <Switch>
-                    <Route path="/Archived" component={Archived} />
+                    <Route exact path="/Archived" component={ArchivedScreen} />
 
-                    <Route path="/" component={TodoApp} />
+                    <Route path="/" component={HomeScreen} />
 
                 </Switch>
 

@@ -15,6 +15,7 @@ export const TodoCard = ({ todo, index, handleDelete, handleArchive}) => {
                 <Card.Body>
                     <Card.Title>
                         {category}
+                        <hr/>
                     </Card.Title>
 
                     <Card.Text>
@@ -32,9 +33,15 @@ export const TodoCard = ({ todo, index, handleDelete, handleArchive}) => {
                 <Card.Footer>
 
                     {
-                        done?
-                            <Button onClick={ () => handleDelete( id ) }> Borrar Definitivamente </Button>
-                            :<Button onClick={ () => handleArchive( id ) }> Completar </Button>                            
+                        done ?
+                                <>
+                                    <Button variant="warning" onClick={ () => handleArchive( id ) }> Desarchivar </Button>
+                                    <Button variant="danger"  onClick={ () => handleDelete( id ) }> Borrar  </Button>
+                                </>
+                            :
+                                <>
+                                    <Button size="md" block onClick={ () => handleArchive( id ) }> Completar </Button>
+                                </>
 
                     }
 

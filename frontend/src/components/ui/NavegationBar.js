@@ -1,14 +1,28 @@
-import React  from 'react'
+import React, { useState }  from 'react'
 import { Link, NavLink } from 'react-router-dom'
+
 
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import { Button } from 'react-bootstrap'
+import { TodoAddModal } from '../todoApp/TodoAddModal'
 
 
 
 export const NavegationBar = () => {
 
 
+    const [showAddTodoModal, setShowAddTodoModal] = useState(false);
+
+    const handleHideModal = () =>{
+        setShowAddTodoModal(false);
+    }
+
+    const handleShowModal = () =>{
+        setShowAddTodoModal(true);
+    }
+
+    
     
 
     return (
@@ -37,8 +51,22 @@ export const NavegationBar = () => {
                     
                 </Nav>
 
-    
+                <Button 
+                    variant="primary"
+                    onClick={ handleShowModal }
+                >
+                    Agregar Tarea
+                </Button>
+                
+
             </Navbar>
+            
+            <TodoAddModal
+
+                showModal={showAddTodoModal}
+                handleHide={handleHideModal}
+
+            />
 
         </>
     )

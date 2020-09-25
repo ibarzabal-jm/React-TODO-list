@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import { useForm } from '../../hooks/useForm';
+import {TodoContext} from '../todoApp/TodoContext'
+
 
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 
-export const TodoAddModal = ({ handleAddTodo, showModal, handleHide }) => {
+export const TodoAddModal = ({ showModal, handleHide }) => {
+
+
+    const { dispatch } = useContext( TodoContext );
 
 
     const [{category, description}, handleInputChange, reset ] = useForm({
@@ -15,6 +20,8 @@ export const TodoAddModal = ({ handleAddTodo, showModal, handleHide }) => {
         description:'',
     })
 
+
+ 
 
     const handleSubmit = ( e ) => {
 
@@ -25,8 +32,12 @@ export const TodoAddModal = ({ handleAddTodo, showModal, handleHide }) => {
             done: false
         }
 
+        dispatch({
+                type: 'add',
+                payload: newTodo
+        });
         
-        handleAddTodo( newTodo );
+
         reset();
 
         handleHide();

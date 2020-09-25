@@ -17,7 +17,7 @@ export const ArchivedScreen = () => {
 
     return (
         <>
-            <Container>
+            <Container >
                 <h1>Tareas completadas : { todoslist.length }</h1>
                 <hr></hr>
 

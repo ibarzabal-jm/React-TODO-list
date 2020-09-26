@@ -21,14 +21,13 @@ _Cosas hechas:_
 * TodoList principal
 * Modal AddTodo
 * Navbar
-
+* Diferenciar entre archivos y todos por hacer
+* Archived
 
 
 _Cosas por hacer:_
 * Footer
-* Archived
 * Fetch de imagenes
-* Diferenciar entre archived y todo por hacer principal
 * Alert
 
 

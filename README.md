@@ -23,6 +23,7 @@ _Cosas hechas:_
 * Navbar
 * Diferenciar entre archivos y todos por hacer
 * Archived
+* UseContext
 
 
 _Cosas por hacer:_

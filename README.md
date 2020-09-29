@@ -1,5 +1,5 @@
 # React TODO list
- TODO LIST hecho en react, la idea era hacer uso del hook useReducer, como el hook principal y luego hacer una especie de archivos de tareas realizadas, todo guardado de momento en el local Storage.
+ TODO LIST hecho en react, la idea era hacer uso del hook useReducer, como el hook principal y luego hacer una especie de archivos de tareas realizadas, todo guardado de momento en el local Storage. Al final me fue conveniente usar el hook de useContext para manejarlo de forma global en toda la aplicación, resultó conveniente y claro.
 
 
 ## Objetivos:
